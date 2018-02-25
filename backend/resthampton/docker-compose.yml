@@ -1,0 +1,17 @@
+models:
+    image: tp33/django
+    external_links:
+      -  mysql:db
+    volumes:
+      - ./app:/app
+    ports:
+      - "8001:8000"
+    command: >
+            bash -c "cd ./resthampton
+            && pip install djangorestframework==3.7.7
+            && pip install Pillow==5.0.0
+            && pip install django-cors-headers==2.1.0
+            && python manage.py makemigrations
+            && python manage.py migrate
+            && python manage.py loaddata db.json
+            && mod_wsgi-express start-server --working-directory /app/resthampton --reload-on-changes /app/resthampton/resthampton/wsgi.py"

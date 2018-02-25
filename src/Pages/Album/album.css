@@ -1,0 +1,47 @@
+.album-bg {
+	width: 100%;
+}
+.album-bg-container {
+	background: no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: absolute;
+	opacity: 0.4;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+.splash-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.main-content {
+	width: 100vw;
+	position: absolute;
+	top: 100vh;
+	left: 0;
+}
+
+.album-name {
+	font-family: Georgia, serif;
+	font-size: 96px;
+	text-align: center;
+	letter-spacing: 6.7px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-100%);
+}
+
+.song-name {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 13.5px;
+}
