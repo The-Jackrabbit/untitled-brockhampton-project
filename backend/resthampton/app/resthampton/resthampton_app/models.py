@@ -89,11 +89,15 @@ class Song(models.Model):
 				'lyrics': songPart.lyrics
 			}
 			personPartLinks = SongPartToPerson.objects.filter(songPart=songPart)
-			persons = set()
+			persons = {}
 			for personPartLink in personPartLinks:
-				persons.add(personPartLink.person.__str__())
+				persons[personPartLink.person.pk] = {
+					"name": personPartLink.person.__str__(),
+					"pk": personPartLink.person.pk,
+					"img": personPartLink.person.img_sm.url
+				}
 			part['persons'] = persons
-			json[songPart.pk] = part
+			json[songPart.position] = part
 
 		return json
 

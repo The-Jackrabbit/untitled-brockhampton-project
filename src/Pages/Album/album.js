@@ -4,8 +4,6 @@ import axios from "axios";
 import CastList from "../../Components/Cast-List/castList";
 import CreditCircle from "../../Components/Credit-Circle/creditCircle";
 
-const qs = require('query-string');
-
 class Album extends Component {
 	constructor() {
 		super();
@@ -25,25 +23,18 @@ class Album extends Component {
 				"saturation2" : 2,
 				"saturationii" : 2,
 				2 : 2,
-				"iii": 2,
+				"ii": 2,
 				"saturation" : 1,
 				"saturation1" : 1,
 				"saturationi" : 1,
 				1 : 1,
-				"iii": 1
+				"ii": 1
 			}
 		}
 	}
 	componentWillMount() {
-		console.log("Props");
-		console.log(this.props);
-		console.log("location");
-		console.log(this.props.location.pathname);
-		console.log("split");
 		var urlArgs = this.props.location.pathname.split("/");
 		var albumArg = urlArgs[urlArgs.length - 1];
-		console.log("albumArg");
-		console.log(albumArg);
 		var pk = this.state.albumMap[albumArg];
 		this.setState({
 			"pk": pk
@@ -83,25 +74,84 @@ class Album extends Component {
 			
 			_this.state.tracklist.forEach((song, i) => {
 				var credits = [];
-				var creditId = 0;
-				for (var key in song.credits.writers) {
-					credits.push(<CreditCircle iconUrl={song.credits.writers[key].img} strokeColor="#70A6ED" pathBase="http://localhost:8001" imageKey={'writer' + song.credits.writers[key].pk} key={creditId}></CreditCircle>);
-					creditId++;
+				var lyrics = [];
+				for (var writerKey in song.credits.writers) {
+					credits.push(
+						<CreditCircle 
+							size="sm" 
+							strokeColor="#70A6ED" 
+							iconUrl={song.credits.writers[writerKey].img} 
+							pathBase="http://localhost:8001" 
+							imageKey={'smwriter' + song.credits.writers[writerKey].pk} 
+							key={'smwriter' + song.credits.writers[writerKey].pk} >
+						</CreditCircle>
+					);
 				}
-				for (var key in song.credits.producers) {
-					credits.push(<CreditCircle iconUrl={song.credits.producers[key].img} pathBase="http://localhost:8001" 
-										imageKey={'producer' + song.credits.producers[key].pk} key={creditId} strokeColor="#F58123"></CreditCircle>);
-					creditId++;
+				for (var producerKey in song.credits.producers) {
+					credits.push(
+						<CreditCircle 
+							size="sm" 
+							strokeColor="#F58123"
+							iconUrl={song.credits.producers[producerKey].img} 
+							pathBase="http://localhost:8001" 
+							imageKey={'smproducer' + song.credits.producers[producerKey].pk} 
+							key={'smproducer' + song.credits.producers[producerKey].pk}>
+						</CreditCircle>
+					);
+				}
+
+				for (var key in song.body) {
+					var part = song.body[key];
+					var people = "";
+					var peopleCircles = []
+					var peopleCircleCount = 0;
+					for (var key in part.persons) {
+						var person = part.persons[key];
+						people += person.name;
+						var circ = 
+							<CreditCircle 
+								size="md"
+								strokeColor="#70A6ED" 
+								pathBase="http://localhost:8001" 
+								iconUrl={person.img} 
+								imageKey={'mdwriter' + person.pk} 
+								key={'mdwriter' + person.pk}>
+							</CreditCircle>;
+						peopleCircles.push(circ);
+						if (peopleCircleCount < Object.keys(part.persons).length - 1) {
+							people += " & ";
+						}
+						peopleCircleCount++;
+					}
+					var songPart = 
+					<div className="container" key={part.pk}>
+						<div className="row">
+							<div className="col col-xs-12 col-sm-2" style={{'textAlign': 'end'}}>
+								{peopleCircles}
+							</div>
+							<div className="col col-xs-12 col-sm-10">
+								<h3 className="part-type-header">{part.partType + " - " + people}</h3>
+								<p className="lyrics">{part.lyrics}</p>
+							</div>
+						</div>
+					</div>
+
+					lyrics.push(songPart);
 				}
 				
 				var songRow = 
 				<div key={i} className="container">
-					<div className="row align-items-center">
-						<div className="col col-sm-4">
+					<div className="row align-items-center justify-content-between song-row">
+						<div className="col col-sm-auto">
 							<span className="song-name">{song.name}</span>
 						</div>
-						<div className="col col-sm-8" style={{'textAlign': 'end'}}>
+						<div className="col col-sm-auto credit-col" style={{'textAlign': 'end'}}>
 							{credits}
+						</div>
+					</div>
+					<div className="row song-lyrics-container" style={{'display': 'none'}}>
+						<div className="col col-xs-12">
+							{lyrics}
 						</div>
 					</div>
 					<div className="row">
@@ -125,10 +175,8 @@ class Album extends Component {
 						<div className="row">
 							<div className="col col-md-1"></div>
 							<div className="col col-md-10">
-								<div key={this.state.tracklist}>
 								{this.state.tracklistMarkup}
 								
-								</div>
 							</div>
 							<div className="col col-md-1"></div>
 						</div>

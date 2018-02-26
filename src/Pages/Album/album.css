@@ -45,3 +45,28 @@
 	text-transform: uppercase;
 	letter-spacing: 13.5px;
 }
+
+.part-type-header {
+	font-family: Georgia, serif;
+	font-size: 36px;
+}
+
+.lyrics {
+	font-family: Georgia, serif;
+	font-size: 21px;
+	white-space: pre-wrap;
+}
+
+.song-lyrics-container {
+	max-height: 90vh;
+	overflow-y: scroll;
+}
+
+.song-row {
+	cursor: pointer;
+	
+}
+
+.song-row:hover {
+	color: #70A6ED;
+}
