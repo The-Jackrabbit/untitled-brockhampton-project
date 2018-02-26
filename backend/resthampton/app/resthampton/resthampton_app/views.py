@@ -26,11 +26,20 @@ class ParseSongViewSet(viewsets.ModelViewSet):
 		json = {}
 		body = request.data["body"]
 		song_title = request.data["song_title"]
+		album_title = request.data["album_title"]
+		song_position = request.data["song_position"]
 		json['song_title'] = song_title
+		json['album_title'] = album_title
 		songAlreadyExists = Song.objects.filter(name=song_title)
-		if len(songAlreadyExists) == 0 or True:
+		if len(songAlreadyExists) == 0:
 			persons = {}
 			keys = []
+			song = Song(
+				name=song_title,
+				album=Album.objects.get(name=album_title),
+				position=song_position
+			)
+			song.save()
 			songPartsAlreadyExist = SongPart.objects.filter(song=songAlreadyExists)
 			if len(songPartsAlreadyExist) == 0:
 				for key in body:

@@ -17,7 +17,38 @@ class Album extends Component {
 			"runtime": "",
 			"tracklist": [],
 			"tracklistMarkup": [],
+			"albumMap": {
+				"saturation3" : 3,
+				"saturationiii" : 3,
+				3 : 3,
+				"iii": 3,
+				"saturation2" : 2,
+				"saturationii" : 2,
+				2 : 2,
+				"iii": 2,
+				"saturation" : 1,
+				"saturation1" : 1,
+				"saturationi" : 1,
+				1 : 1,
+				"iii": 1
+			}
 		}
+	}
+	componentWillMount() {
+		console.log("Props");
+		console.log(this.props);
+		console.log("location");
+		console.log(this.props.location.pathname);
+		console.log("split");
+		var urlArgs = this.props.location.pathname.split("/");
+		var albumArg = urlArgs[urlArgs.length - 1];
+		console.log("albumArg");
+		console.log(albumArg);
+		var pk = this.state.albumMap[albumArg];
+		this.setState({
+			"pk": pk
+		});
+		
 	}
 	is_touch_device() {  
 		try {  
@@ -29,7 +60,8 @@ class Album extends Component {
 	 }
 
 	componentDidMount() {
-		var albumPK = qs.parse(this.props.location.search)['pk'];
+		// var albumPK = qs.parse(this.props.location.search)['pk'];
+		var albumPK = this.state.pk;
 		var _this = this;
 		axios.get(`http://localhost:8001/api/albums/${albumPK}/detail`)
 		.then(function(res){

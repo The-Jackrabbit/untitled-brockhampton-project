@@ -50,12 +50,17 @@ class Song(models.Model):
 			personPartLinks = SongPartToPerson.objects.filter(songPart=song_part)
 			for personPartLink in personPartLinks:
 				if personPartLink.person.pk not in writers:
-					writers[personPartLink.person.pk] = {
-						'name': personPartLink.person.__str__(),
-						'img': personPartLink.person.img_sm.url,
-						'parts': {personPartLink.songPart.partType},
-						'pk' : personPartLink.person.pk
-					}
+					try:
+						writers[personPartLink.person.pk] = {
+							'name': personPartLink.person.__str__(),
+							'img': personPartLink.person.img_sm.url,
+							'parts': {personPartLink.songPart.partType},
+							'pk' : personPartLink.person.pk
+						}
+					except ValueError:
+						return {
+							"person": personPartLink.person.__str__()
+						}
 				else: {
 					writers[personPartLink.person.pk]['parts'].add(personPartLink.songPart.partType)
 				}
