@@ -24,22 +24,50 @@ class CastList extends Component {
 
   render() {
     return (
-		<div className="cast-list">
-			<span>|</span>
-			<a href="/ka">Kevin Abstract</a>
-			<span>|</span>
-			<a href="/av">Ameer Vann</a>
-			<span>|</span>
-			<a href="/mw">Merlyn Wood</a>
-			<span>|</span>
-			<a href="/dm">Dom McLennon</a>
-			<span>|</span>
-			<a href="/mc">Matt Champion</a>
-			<span>|</span>
-			<a href="/j">Joba</a>
-			<span>|</span>
-			<a href="/bf">Bear//Face</a>
-			<span>|</span>
+		<div>
+			<div className="cast-list">
+				<span>|</span>
+				<a href="/member/ka">Kevin Abstract</a>
+				<span>|</span>
+				<a href="/member/av">Ameer Vann</a>
+				<span>|</span>
+				<a href="/member/mw">Merlyn Wood</a>
+				<span>|</span>
+				<a href="/member/dm">Dom McLennon</a>
+				<span>|</span>
+				<a href="/member/mc">Matt Champion</a>
+				<span>|</span>
+				<a href="/member/j">Joba</a>
+				<span>|</span>
+				<a href="/member/bf">Bear//Face</a>
+				<span>|</span>
+			</div>
+			<div className="cast-list">
+				<span>|</span>
+				<a href="/member/rh">Romil Hemnani</a>
+				<span>|</span>
+				<a href="/member/jm">Jabari Manwa</a>
+				<span>|</span>
+				<a href="/member/km">Kiko Merley</a>
+				<span>|</span>
+				<a href="/member/q3">Q3</a>
+				<span>|</span>
+				<a href="/member/hk">HK</a>
+				<span>|</span>
+				<a href="/member/kd">Kevin Doan</a>
+				<span>|</span>
+				<a href="/member/ag">Ashlan Grey</a>
+				<span>|</span>
+			</div>
+			<div className="cast-list albums">
+				<span>|</span>
+				<a href="/album/i">Saturation I</a>
+				<span>|</span>
+				<a href="/album/ii">Saturation II</a>
+				<span>|</span>
+				<a href="/album/iii">Saturation III</a>
+				<span>|</span>
+			</div>
 		</div>
     );
   }

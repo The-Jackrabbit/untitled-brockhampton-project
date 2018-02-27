@@ -7,7 +7,7 @@ import {
 
 import SplashScreen from './Pages/Splashscreen/splashscreen';
 import Album from './Pages/Album/album';
-
+import Member from './Pages/Member/member';
 
 class App extends Component {
   render() {
@@ -19,6 +19,7 @@ class App extends Component {
 				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossOrigin="anonymous"></script>
 				<Route exact path="/" component={SplashScreen} />
 				<Route path="/album/" component={Album} />
+				<Route path="/member/" component={Member} />
 			</div>
 		</Router>
     );

@@ -2,7 +2,7 @@
 	width: 100%;
 }
 .album-bg-container {
-	background: no-repeat center center fixed; 
+	background: no-repeat center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -18,6 +18,9 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 100;
 }
 
 .main-content {
@@ -29,13 +32,14 @@
 
 .album-name {
 	font-family: Georgia, serif;
+	font-style: italic;
 	font-size: 96px;
 	text-align: center;
 	letter-spacing: 6.7px;
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translateX(-50%) translateY(-100%);
+	top: 50vh;
+	left: 50vw;
+	transform: translateX(-50%) translateY(-75%);
 }
 
 .song-name {
