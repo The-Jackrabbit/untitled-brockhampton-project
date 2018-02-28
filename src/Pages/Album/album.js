@@ -35,7 +35,12 @@ class Album extends Component {
 		this.toggleSongLyrics = this.toggleSongLyrics.bind(this);
 	}
 	componentWillMount() {
-		var urlArgs = this.props.location.pathname.split("/");
+		var urlArgs;
+		if (this.props.location === undefined) {
+			urlArgs = ['album', 'iii'];
+		} else {
+			urlArgs = this.props.location.pathname.split("/");
+		}
 		var albumArg = urlArgs[urlArgs.length - 1];
 		var pk = this.state.albumMap[albumArg];
 		this.setState({
@@ -96,19 +101,15 @@ class Album extends Component {
 		return (
 			<div>
 				<div className="main-content">
-					<div className="container" style={{'padding': '15px'}}>
-						<div className="row">
-							<div className="col col-md-1"></div>
-							<div className="col col-md-10">
-								{this.state.tracklistMarkup}
-								
-							</div>
-							<div className="col col-md-1"></div>
+					<div className="album grid-container" style={{'padding': '15px'}}>
+						<div className="tracklist">
+							{this.state.tracklistMarkup}
+							
 						</div>
 					</div>
 				</div>
 				<div className="splash-content">
-					<p className="album-name">{this.state.albumName}</p>
+					{/*<p className="album-name">{this.state.albumName}</p>*/}
 					
 					<CastList></CastList>
 				</div>
@@ -119,5 +120,3 @@ class Album extends Component {
 }
 
 export default Album;
-
-

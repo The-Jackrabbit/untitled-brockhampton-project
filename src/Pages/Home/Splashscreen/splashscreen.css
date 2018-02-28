@@ -1,0 +1,38 @@
+
+.splash.grid-container {
+	display: grid;
+	height: 100vh;
+	width: 100vw;
+	grid-template-areas: "header header header" 
+								". trigram ."
+								". footer ." ;
+		  /*"head head"
+                       "nav  main"
+                       "nav  foot";*/
+}
+@media only screen and (max-width: 500px) {
+	#root {
+		min-height: 100vh;
+	}
+	.splash.grid-container {
+		grid-template-areas: 
+		"header"
+		"trigram"
+		"footer";
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 3fr 1fr;
+	}
+	 
+}
+
+.header {
+	grid-area: header;
+}
+.trigram {
+	grid-area: trigram;
+	margin: auto;
+}
+.footer {
+	grid-area: footer;
+	margin: auto;
+}

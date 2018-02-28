@@ -74,3 +74,30 @@
 .song-row:hover {
 	color: #70A6ED;
 }
+
+
+.album.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
+	grid-template-areas: ". tracklist ." ;
+		  /*"head head"
+                       "nav  main"
+                       "nav  foot";*/
+}
+@media only screen and (max-width: 500px) {
+	
+	.album.grid-container {
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"tracklist";
+		width: 100vw;
+	}
+	 
+}
+
+.header {
+	grid-area: header;
+}
+.tracklist {
+	grid-area: tracklist;
+}

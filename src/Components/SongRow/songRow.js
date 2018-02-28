@@ -71,15 +71,15 @@ class SongRow extends Component {
 			}
 
 			var songPartBlock = 
-			<div className="container" key={songPartData.pk}>
-				<div className="row">
-					<div className="col col-xs-12 col-sm-2" style={{'textAlign': 'end'}}>
-						{writerIcons}
-					</div>
-					<div className="col col-xs-12 col-sm-10">
-						<h3 className="part-type-header">{songPartTitle}</h3>
-						<p className="lyrics">{songPartData.lyrics}</p>
-					</div>
+			<div className="song-part grid-container" key={songPartData.pk}>
+				<div className="song-part name">
+					<h3 className="part-type-header">{songPartTitle}</h3>
+				</div>
+				<div className="song-part credits">
+					{writerIcons}
+				</div>
+				<div className="song-part lyrics">
+					<p className="lyrics">{songPartData.lyrics}</p>
 				</div>
 			</div>;
 			lyrics.push(songPartBlock);
@@ -104,24 +104,18 @@ class SongRow extends Component {
 
 	render() {
 		return (
-			<div className="container">
-				<div className="row align-items-center justify-content-between song-row" onClick={this.toggleLyricBlock}>
-					<div className="col col-sm-auto">
-						<span className="song-name">{this.props.name}</span>
-					</div>
-					<div className="col col-sm-auto credit-col" style={{'textAlign': 'end'}}>
-						{this.state.credits}
-					</div>
+			<div className="song grid-container song-row" onClick={this.toggleLyricBlock}>
+				<div className="song name">
+					<p className="song-name">{this.props.name}</p>
 				</div>
-				<div className="row song-lyrics-container" style={{'display': this.state.lyricBlockVisibility}}>
-					<div className="col col-xs-12">
-						{this.state.lyrics}
-					</div>
+				<div className="song credits credit-col">
+					{this.state.credits}
 				</div>
-				<div className="row">
-					<div className="col col-xs-12">
-						<hr />
-					</div>
+				<div className="song lyrics" style={{'display': this.state.lyricBlockVisibility}}>
+					{this.state.lyrics}
+				</div>
+				<div className="song separator">
+					<hr />
 				</div>
 			</div>
 		);
