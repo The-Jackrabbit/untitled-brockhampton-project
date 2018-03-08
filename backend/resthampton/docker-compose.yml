@@ -13,5 +13,5 @@ models:
             && pip install django-cors-headers==2.1.0
             && python manage.py makemigrations
             && python manage.py migrate
-            && python manage.py loaddata db4.json
+            && python manage.py loaddata db5.json
             && mod_wsgi-express start-server --working-directory /app/resthampton --reload-on-changes /app/resthampton/resthampton/wsgi.py"

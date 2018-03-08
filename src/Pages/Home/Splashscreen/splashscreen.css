@@ -25,14 +25,14 @@
 	 
 }
 
-.header {
+.splash .header {
 	grid-area: header;
 }
-.trigram {
+.splash .trigram {
 	grid-area: trigram;
 	margin: auto;
 }
-.footer {
+.splash .footer {
 	grid-area: footer;
 	margin: auto;
 }

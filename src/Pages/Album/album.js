@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './album.css';
 import axios from "axios";
 import CastList from "../../Components/Cast-List/castList";
-import CreditCircle from "../../Components/Credit-Circle/creditCircle";
 import SongRow from '../../Components/SongRow/songRow';
 class Album extends Component {
 	constructor() {
@@ -18,15 +17,18 @@ class Album extends Component {
 			"albumMap": {
 				"saturation3" : 3,
 				"saturationiii" : 3,
+				"saturation+iii" : 3,
 				3 : 3,
 				"iii": 3,
 				"saturation2" : 2,
 				"saturationii" : 2,
+				"saturation+ii" : 2,
 				2 : 2,
 				"ii": 2,
 				"saturation" : 1,
 				"saturation1" : 1,
 				"saturationi" : 1,
+				"saturation+i" : 1,
 				1 : 1,
 				"i": 1
 			}
@@ -42,11 +44,10 @@ class Album extends Component {
 			urlArgs = this.props.location.pathname.split("/");
 		}
 		var albumArg = urlArgs[urlArgs.length - 1];
-		var pk = this.state.albumMap[albumArg];
+		var pk = this.state.albumMap[albumArg.toLowerCase()];
 		this.setState({
 			"pk": pk
 		});
-		
 	}
 	toggleSongLyrics() {
 		console.log("hi");

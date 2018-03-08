@@ -12,3 +12,10 @@
 .cast-list {
 	text-align: center;
 }
+.cast-list a.active {
+	color: #70A6ED;
+}
+.cast-list a:hover {
+	color: #70A6ED;
+	text-decoration: none;
+}

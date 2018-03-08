@@ -1,0 +1,56 @@
+def get_song_parts(self):
+		songPartsToPerson = SongPartToPerson.objects.filter(person=self)
+		# 
+		# START DATA PREP 
+		data = {} '''{
+			"barCategories":["Saturation II","Saturation I","Saturation III","overall"],
+			"pieAlbumData":[
+				{"name":"Saturation II","value":0},
+				{"name":"Saturation I","value":0},
+				{"name":"Saturation III","value":0}
+			],
+			"data":[
+				{"name":"Bridge","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0},
+				{"name":"Breakdown","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0},
+				{"name":"Chorus","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0},
+				{"name":"Intro","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0},
+				{"name":"Outro","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0},
+				{"name":"Verse","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0}
+				{"name":"Pre-Chorus","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0},
+				{"name":"Breakdown","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0},
+				{"name":"Skit","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0}
+			],
+			"piePartData":[
+				{"name":"Bridge", "value": 0},
+				{"name":"Breakdown","value":0},
+				{"name":"Chorus","value":0},
+				{"name":"Intro","value":0},
+				{"name":"Outro","value":0},
+				{"name":"Verse","value":0},
+				{"name":"Pre-Chorus", "value":0},
+				{"name":"Breakdown", "value":0},
+				{"name":"Skit", "value":0}
+			]
+		}
+		# END DATA PREP 
+		
+		# get counts of songParts
+		for songPartLink in songPartsToPerson:
+			songPart = songPartLink.songPart
+			song = songPart.song
+			album = song.album
+			for pieAlbum in data["pieAlbumData"]:
+				if pieAlbum.name == album.name:
+					pieAlbum["value"] += 1
+			for piePart in data["pieAlbumData"]:
+				if piePart.name == songPart.partType:
+					piePart["value"] += 1
+			for dataPoint in data["data"]:
+				if dataPoint.name == songPart.partType:
+					dataPoint[album.name] += 1
+					ataPoint["overall"] += 1
+		'''
+
+		return data
+		# use previously calced counts to get total parts and percentage
+	

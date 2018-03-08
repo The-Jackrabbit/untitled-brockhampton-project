@@ -10,7 +10,7 @@ class Home extends Component {
 				<CastList></CastList>
 			</div>
 			<div className="body">
-				<img src={theBoys}/>
+				<img src={theBoys} alt="brockhampton-group-pic"/>
 			</div>
 		</div>
     );

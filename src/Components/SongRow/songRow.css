@@ -42,7 +42,7 @@
 	display: grid;
 	grid-template-columns: 1fr 6fr;
 	grid-template-areas: "credits name" 
-								". lyrics";
+								"credits lyrics";
 		  /*"head head"
                        "nav  main"
                        "nav  foot";*/

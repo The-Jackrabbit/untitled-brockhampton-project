@@ -25,14 +25,14 @@
 	 
 }
 
-.header {
+.home .header {
 	grid-area: header;
 }
-.body {
+.home .body {
 	grid-area: body;
 	margin: auto;
 }
-.footer {
+.home .footer {
 	grid-area: footer;
 	margin: auto;
 }

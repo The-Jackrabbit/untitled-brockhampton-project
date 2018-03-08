@@ -1,6 +1,29 @@
 from django.db import models
 from django.db.models import Q
+import re
 # Create your models here.
+
+def convert_to_percent(numerator, denominator):
+	if denominator <= 0:
+		return 0
+	return float(numerator/denominator)*100
+
+def is_filler_word(word):
+	filler_words = {
+		"i": "",
+		"me": "",
+		"you": "",
+		"what": "",
+		"that": "",
+		"the": "",
+		"a": "",
+		"to": "",
+		"it": "",
+		"on": "",
+		"is": "",
+		"and": ""
+	}
+	return word in filler_words
 
 class Album(models.Model):
 	name = models.CharField(max_length=250)
@@ -136,6 +159,10 @@ class SongPart(models.Model):
 	def __str__(self):
 		return self.song.name + " " + self.partType + " " + str(self.position)
 
+	def get_count_of_types(self, partType):
+		songPartsOfType = SongPart.objects.filter(partType=partType)
+		return len(songPartsOfType)
+
 class Bar(models.Model):
 	lyrics = models.TextField()
 	notes = models.TextField()
@@ -150,6 +177,132 @@ class Person(models.Model):
 
 	def __str__(self):
 		return self.name
+
+	def format_word(self, word):
+		symbols_to_delimit_on = ["\n"]
+		for sym in symbols_to_delimit_on:
+			word = word.replace(sym, " ")
+		symbols_to_remove = [",", "\r", ")", "(", "\"", "?"]
+		for sym in symbols_to_remove:
+			word = word.replace(sym, "")
+
+		word = word.lower()
+
+		return word
+
+	def get_pic(self, size=None):
+		if size == "lg":
+			return self.img_lg.url
+		elif size == "md":
+			return self.img_md.url
+		else:
+			return self.img_sm.url
+
+	def get_words(self):
+		wordMap = {}
+		songParts = SongPartToPerson.objects.filter(person=self)
+		for songPart in songParts:
+			text = songPart.songPart.lyrics
+			album = songPart.songPart.song.album.name
+			words = self.format_word(text).split(" ")
+			for word in words:
+				if word not in wordMap:
+					wordEntry = {"overall": 1}
+					wordEntry[album] = 1
+					wordMap[word] = wordEntry
+				else:
+					wordMap[word]["overall"] += 1
+					if album in wordMap[word]:
+						wordMap[word][album] += 1
+					else:
+						wordMap[word][album] = 1
+		
+		return wordMap
+
+	def get_num_unique_words(self):
+		words = self.get_words()
+		return len(words.keys())
+
+	def get_num_words(self):
+		words = self.get_words()
+		count = 0 
+		for word in words:
+			count += words[word]["overall"]
+		
+		return count
+
+	def get_top_n_words(self, n=10, allowFiller=False, minLength=1):
+		words = self.get_words().keys()
+		vals = self.get_words()
+		w = []
+		for word in words:
+			if allowFiller and len(word) > minLength:
+				wordData = {}
+				for category in vals[word]:
+					wordData[category] = vals[word][category]
+				w.append(wordData)
+			else:
+				if not is_filler_word(word) and len(word) > minLength:
+					wordData = {}
+					for category in vals[word]:
+						wordData[category] = vals[word][category]
+					w.append(wordData)
+		w.sort(key=lambda x: x["overall"], reverse=True)
+		return w[0:n]
+	
+	def get_song_parts(self):
+		songPartsToPerson = SongPartToPerson.objects.filter(person=self)
+		data = {
+			"barCategories":["Saturation II","Saturation I","Saturation III","overall"],
+			"pieAlbumData":[
+				{"name":"Saturation II","value":0},
+				{"name":"Saturation I","value":0},
+				{"name":"Saturation III","value":0}
+			],
+			"data":[
+				{"name":"Bridge","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0},
+				{"name":"Breakdown","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0},
+				{"name":"Chorus","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0},
+				{"name":"Intro","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0},
+				{"name":"Outro","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0},
+				{"name":"Verse","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0},
+				{"name":"Pre-Chorus","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0},
+				{"name":"Breakdown","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0},
+				{"name":"Skit","Saturation II":0,"Saturation I":0,"Saturation III":0,"overall":0}
+			],
+			"piePartData":[
+				{"name":"Bridge", "value": 0},
+				{"name":"Breakdown","value":0},
+				{"name":"Chorus","value":0},
+				{"name":"Intro","value":0},
+				{"name":"Outro","value":0},
+				{"name":"Verse","value":0},
+				{"name":"Pre-Chorus", "value":0},
+				{"name":"Breakdown", "value":0},
+				{"name":"Skit", "value":0}
+			]
+		}
+		# get counts of songParts
+		for songPartLink in songPartsToPerson:
+			songPart = songPartLink.songPart
+			song = songPart.song
+			album = song.album
+			for pieAlbum in data["pieAlbumData"]:
+				if pieAlbum["name"] == album.name:
+					pieAlbum["value"] += 1
+			
+			for piePart in data["piePartData"]:
+				if piePart["name"] == songPart.partType:
+					piePart["value"] += 1
+			
+			for dataPoint in data["data"]:
+				if dataPoint["name"] == songPart.partType:
+					dataPoint[album.name] += 1
+					dataPoint["overall"] += 1
+			
+	
+		return data
+	
 
 class SongPartToPerson(models.Model):
 	relationship_choices = (

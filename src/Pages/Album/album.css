@@ -71,14 +71,14 @@
 	
 }
 
-.song-row:hover {
+div.song.name:hover {
 	color: #70A6ED;
 }
 
 
 .album.grid-container {
 	display: grid;
-	grid-template-columns: 1fr 4fr 1fr;
+	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-areas: ". tracklist ." ;
 		  /*"head head"
                        "nav  main"
@@ -95,9 +95,9 @@
 	 
 }
 
-.header {
+.album .header {
 	grid-area: header;
 }
-.tracklist {
+.album .tracklist {
 	grid-area: tracklist;
 }

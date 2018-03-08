@@ -8,7 +8,6 @@ import {
 import Album from './Pages/Album/album';
 import Member from './Pages/Member/member';
 import SplashToHome from './Pages/Home/singlePageSplashToHome';
-import {ScrollToTopOnMount, SectionsContainer, Section} from 'react-fullpage';
 
 class App extends Component {
   render() {

@@ -48,5 +48,15 @@ urlpatterns = [
 	url(r'^api/parse_song/', parse_song, name='parse-song'),
 	url(r'^api/albums/(?P<pk>[0-9]+)/detail', album_detail, name='album-detail'),
 
+	url(r'^api/person/words/', views.words, name='words'),
+	url(r'^api/person/parts/', views.parts, name='parts'),
+	url(r'^api/person/pics/', views.personPic, name='personPic'),
+	url(r'^api/memberPage/', views.memberPage, name='memberPage'),
+
+	url(r'^api/persons/(?P<pk>[0-9]+)/words', views.get_word_count, name='get-words'),
+
+	# GET ONLY API
+	
+
    url(r'^admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) +  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # Needed to route static files

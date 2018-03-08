@@ -20,6 +20,13 @@ class CreditCircle extends Component {
 					"cx": 35,
 					"cy": 35,
 					"r": 32.5
+				},
+				"lg" : {
+					"svg_size": 240,
+					"pattern_size": 230,
+					"cx": 119.5,
+					"cy": 119.5,
+					"r": 115
 				}
 			}
 		}
