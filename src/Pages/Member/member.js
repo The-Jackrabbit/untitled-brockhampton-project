@@ -27,13 +27,8 @@ class Member extends Component {
 			"fullHeight": "",
 			"fullWidth": ""
 		}
-
-		this.printState = this.printState.bind(this);
-		this.printProps = this.printProps.bind(this);
 	}
 	componentWillMount() {
-		// console.log("window");
-		// console.log(window);
 		this.setState({
 			"fullHeight": window.innerHeight,
 			"fullWidth": window.innerWidth
@@ -83,27 +78,13 @@ class Member extends Component {
 			_this.setState({
 				"partData": res.data.result.partData
 			});
-			// console.log("this.state.partData.data");
-			// console.log(_this.state.partData.data);
 		})
-	}
-
-	printState() {
-		console.log("heres the state");
-		console.log(this.state);
-	}
-
-	printProps() {
-		console.log("heres the props");
-		console.log(this.props);
 	}
 
 	render() {
 		
 		return (
 			<div className="member-page">
-				<button onClick={this.printState}>State</button>
-				<button onClick={this.printProps}>Props</button>
 				<div className="member grid-container" id="sections" style={{"width": this.state.fullWidth, "height": this.state.fullHeight}}>
 					<div className="header">
 						{this.state.castlist}

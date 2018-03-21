@@ -997,11 +997,11 @@
     "model": "resthampton_app.songpart",
     "pk": 34,
     "fields": {
-        "partType": "Spoken",
+        "partType": "Skit",
         "runtime": null,
         "song": 6,
         "position": 0,
-        "lyrics": "\"Where you going? Um, what happened to y'alls house?\"\n\"Heh... Me llamo Roberto... Eh... Bueno... \u00bfA d\u00f3nde voy?\nAcabo de destruir la casa y nunca m\u00e1s me ver\u00e1s...\nO sea que no sabr\u00e1s d\u00f3nde voy.\""
+        "lyrics": "\"Where you going? Um, what happened to y'alls house?\"\r\n\"Heh... Me llamo Roberto... Eh... Bueno... \u00bfA d\u00f3nde voy?\r\nAcabo de destruir la casa y nunca m\u00e1s me ver\u00e1s...\r\nO sea que no sabr\u00e1s d\u00f3nde voy.\""
     }
 },
 {
@@ -1162,11 +1162,11 @@
     "model": "resthampton_app.songpart",
     "pk": 49,
     "fields": {
-        "partType": "Spoken",
+        "partType": "Skit",
         "runtime": null,
         "song": 11,
         "position": 0,
-        "lyrics": "\"Who are you?\"\n\"Eh... Me llamo Roberto y... La verdad que no creo que nadie me recuerde despu\u00e9s de matarme esta noche.\""
+        "lyrics": "\"Who are you?\"\r\n\"Eh... Me llamo Roberto y... La verdad que no creo que nadie me recuerde despu\u00e9s de matarme esta noche.\""
     }
 },
 {
@@ -1481,11 +1481,11 @@
     "model": "resthampton_app.songpart",
     "pk": 82,
     "fields": {
-        "partType": "Spoken",
+        "partType": "Skit",
         "runtime": null,
         "song": 17,
         "position": 0,
-        "lyrics": "\"Hoe, do you ever feel like you don't belong?\n'Cause I know sometimes I feel that way.\"\n\"Si? O sea... no s\u00e9... Hay d\u00edas que uno piensa\nNo sabes cu\u00e1l es tu sitio en el mundo, no sabes cu\u00e1l es el sitio en tu grupo de amigos, no sabes c\u00f3mo... No s\u00e9... O sea, s\u00ed... Hay d\u00edas que uno no se siente c\u00f3modo en su propia piel... Y es duro, es d\u00edficil... Pero... No s\u00e9... uno...\"\n\"Nice pants.\"\n\"Gracias...\""
+        "lyrics": "\"Hoe, do you ever feel like you don't belong?\r\n'Cause I know sometimes I feel that way.\"\r\n\"Si? O sea... no s\u00e9... Hay d\u00edas que uno piensa\r\nNo sabes cu\u00e1l es tu sitio en el mundo, no sabes cu\u00e1l es el sitio en tu grupo de amigos, no sabes c\u00f3mo... No s\u00e9... O sea, s\u00ed... Hay d\u00edas que uno no se siente c\u00f3modo en su propia piel... Y es duro, es d\u00edficil... Pero... No s\u00e9... uno...\"\r\n\"Nice pants.\"\r\n\"Gracias...\""
     }
 },
 {
@@ -3747,11 +3747,11 @@
     "model": "resthampton_app.songpart",
     "pk": 310,
     "fields": {
-        "partType": "Spoken",
+        "partType": "Skit",
         "runtime": null,
         "song": 56,
         "position": 0,
-        "lyrics": "Padre Celestial\nSoy tu humilde servidor\nTe presento mi necesidad de esperanza\nHay momentos en que me siento impotente\nHay momentos en que me siento d\u00e9bil\nRezo por esperanza\nNecesito esperanza para un futuro mejor\nNecesito esperanza para una vida mejor\nNecesito esperanza para amor y amabilidad\nAlgunos dicen que el cielo se hace m\u00e1s oscuro justo antes de la luz\nRezo que esto sea cierto\nYa que todo parece oscuro\nNecesito tu luz, se\u00f1or, en cada sentido\nRezo para ser llenado con tu luz de cabeza a pies\nPara disfrutar de tu gloria y saber que todo est\u00e1 bien en el mundo\nComo has planeado, y como quieres que sea\nAy\u00fadame a caminar en tu luz, y vivir mi vida en fe y gloria\nEn tu nombre rezo\nAm\u00e9n\n"
+        "lyrics": "Padre Celestial\r\nSoy tu humilde servidor\r\nTe presento mi necesidad de esperanza\r\nHay momentos en que me siento impotente\r\nHay momentos en que me siento d\u00e9bil\r\nRezo por esperanza\r\nNecesito esperanza para un futuro mejor\r\nNecesito esperanza para una vida mejor\r\nNecesito esperanza para amor y amabilidad\r\nAlgunos dicen que el cielo se hace m\u00e1s oscuro justo antes de la luz\r\nRezo que esto sea cierto\r\nYa que todo parece oscuro\r\nNecesito tu luz, se\u00f1or, en cada sentido\r\nRezo para ser llenado con tu luz de cabeza a pies\r\nPara disfrutar de tu gloria y saber que todo est\u00e1 bien en el mundo\r\nComo has planeado, y como quieres que sea\r\nAy\u00fadame a caminar en tu luz, y vivir mi vida en fe y gloria\r\nEn tu nombre rezo\r\nAm\u00e9n"
     }
 },
 {
@@ -6899,6 +6899,510 @@
     }
 },
 {
+    "model": "resthampton_app.songtoperson",
+    "pk": 1,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 1
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 2,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 13,
+        "song": 2
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 4,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 12,
+        "song": 3
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 5,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 12,
+        "song": 4
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 6,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 11,
+        "song": 5
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 7,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 6
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 8,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 13,
+        "song": 7
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 9,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 12,
+        "song": 10
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 10,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 11
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 11,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 13
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 12,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 14
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 13,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 15
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 14,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 16
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 15,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 17
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 16,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 18
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 17,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 11,
+        "song": 19
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 18,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 7,
+        "song": 21
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 19,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 22
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 20,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 24
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 21,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 7,
+        "song": 25
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 22,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 25
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 23,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 26
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 24,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 13,
+        "song": 27
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 25,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 28
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 26,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 12,
+        "song": 29
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 27,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 29
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 28,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 30
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 29,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 31
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 30,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 32
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 31,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 33
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 32,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 34
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 33,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 11,
+        "song": 36
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 34,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 12,
+        "song": 38
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 35,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 38
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 36,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 7,
+        "song": 39
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 37,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 7,
+        "song": 40
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 38,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 41
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 39,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 12,
+        "song": 42
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 40,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 42
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 41,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 43
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 42,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 12,
+        "song": 44
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 43,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 45
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 44,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 13,
+        "song": 48
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 45,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 48
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 46,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 49
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 47,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 12,
+        "song": 49
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 48,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 50
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 49,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 12,
+        "song": 51
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 50,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 52
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 51,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 53
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 52,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 13,
+        "song": 54
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 53,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 54
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 54,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 12,
+        "song": 55
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 55,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 55
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 56,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 9,
+        "song": 56
+    }
+},
+{
+    "model": "resthampton_app.songtoperson",
+    "pk": 57,
+    "fields": {
+        "relationshipType": "Producer",
+        "person": 7,
+        "song": 59
+    }
+},
+{
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -8280,6 +8784,1140 @@
         ],
         "object_id": "58",
         "object_repr": "Team",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2018-03-21T13:18:29.959Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songparttoperson"
+        ],
+        "object_id": "338",
+        "object_repr": "Robert Ontenient wrote a Spoken on Cinema 3",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2018-03-21T13:18:47.664Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songpart"
+        ],
+        "object_id": "310",
+        "object_repr": "Cinema 3 Skit 0",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"partType\", \"lyrics\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2018-03-21T13:19:25.204Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songpart"
+        ],
+        "object_id": "82",
+        "object_repr": "Skit 3 Skit 0",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"partType\", \"lyrics\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2018-03-21T13:19:33.442Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songpart"
+        ],
+        "object_id": "49",
+        "object_repr": "Skit 2 Skit 0",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"partType\", \"lyrics\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2018-03-21T13:19:42.252Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songpart"
+        ],
+        "object_id": "34",
+        "object_repr": "Skit 1 Skit 0",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"partType\", \"lyrics\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2018-03-21T13:22:11.171Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "1",
+        "object_repr": "Romil Hemnani produced Heat",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2018-03-21T13:22:34.586Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "2",
+        "object_repr": "Q3 produced Gold",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2018-03-21T13:22:44.429Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "3",
+        "object_repr": "Kiko Merley produced Gold",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2018-03-21T13:23:11.594Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "4",
+        "object_repr": "Jabari Manwa produced Star",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2018-03-21T13:23:55.053Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "5",
+        "object_repr": "Jabari Manwa produced Boys",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2018-03-21T13:24:10.243Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "6",
+        "object_repr": "Kiko Merley produced 2Pac",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2018-03-21T13:24:27.232Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "7",
+        "object_repr": "Romil Hemnani produced Skit 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2018-03-21T13:24:48.802Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "8",
+        "object_repr": "Q3 produced Fake",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2018-03-21T13:25:04.739Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "9",
+        "object_repr": "Jabari Manwa produced Bank",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2018-03-21T13:25:17.052Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "10",
+        "object_repr": "Romil Hemnani produced Skit 2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2018-03-21T13:25:33.703Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "11",
+        "object_repr": "Romil Hemnani produced Trip",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2018-03-21T13:25:53.906Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "12",
+        "object_repr": "Romil Hemnani produced Swim",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2018-03-21T13:26:06.974Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "13",
+        "object_repr": "Romil Hemnani produced Bump",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2018-03-21T13:26:19.220Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "14",
+        "object_repr": "Romil Hemnani produced Cash",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2018-03-21T13:26:34.412Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "15",
+        "object_repr": "Romil Hemnani produced Skit 3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2018-03-21T13:26:49.017Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "16",
+        "object_repr": "Romil Hemnani produced Milk",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2018-03-21T13:27:02.881Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "17",
+        "object_repr": "Kiko Merley produced Face",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2018-03-21T13:27:20.806Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "18",
+        "object_repr": "Bearface produced Waste",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2018-03-21T13:27:46.062Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "19",
+        "object_repr": "Romil Hemnani produced Gummy",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2018-03-21T13:27:59.547Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "20",
+        "object_repr": "Romil Hemnani produced Queer",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2018-03-21T13:28:16.949Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "21",
+        "object_repr": "Bearface produced Jello",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2018-03-21T13:28:26.265Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "22",
+        "object_repr": "Romil Hemnani produced Jello",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2018-03-21T13:28:38.244Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "23",
+        "object_repr": "Romil Hemnani produced Teeth",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2018-03-21T13:28:54.231Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "24",
+        "object_repr": "Q3 produced Swamp",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2018-03-21T13:29:12.445Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "25",
+        "object_repr": "Romil Hemnani produced Scene",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2018-03-21T13:29:24.966Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "26",
+        "object_repr": "Jabari Manwa produced Tokyo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2018-03-21T13:29:39.833Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "27",
+        "object_repr": "Romil Hemnani produced Tokyo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2018-03-21T13:30:03.460Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "28",
+        "object_repr": "Romil Hemnani produced Jesus",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2018-03-21T13:30:19.195Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "29",
+        "object_repr": "Romil Hemnani produced Chick",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2018-03-21T13:30:31.649Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "30",
+        "object_repr": "Romil Hemnani produced Junky",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2018-03-21T13:31:02.481Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "31",
+        "object_repr": "Romil Hemnani produced Scene 2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2018-03-21T13:31:16.014Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "32",
+        "object_repr": "Romil Hemnani produced Fight",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2018-03-21T13:31:34.215Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "33",
+        "object_repr": "Kiko Merley produced Sweet",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2018-03-21T13:31:46.240Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "34",
+        "object_repr": "Jabari Manwa produced Gamba",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2018-03-21T13:31:54.922Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "35",
+        "object_repr": "Romil Hemnani produced Gamba",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2018-03-21T13:32:07.598Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "36",
+        "object_repr": "Bearface produced Sunny",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+        "action_time": "2018-03-21T13:32:19.649Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "37",
+        "object_repr": "Bearface produced Summer",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+        "action_time": "2018-03-21T13:32:34.419Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "38",
+        "object_repr": "Romil Hemnani produced Boogie",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+        "action_time": "2018-03-21T13:32:51.869Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "39",
+        "object_repr": "Jabari Manwa produced Zipper",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+        "action_time": "2018-03-21T13:33:29.729Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "40",
+        "object_repr": "Romil Hemnani produced Zipper",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+        "action_time": "2018-03-21T13:33:56.660Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "41",
+        "object_repr": "Romil Hemnani produced Johnny",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+        "action_time": "2018-03-21T13:34:09.233Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "42",
+        "object_repr": "Jabari Manwa produced Liquid",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+        "action_time": "2018-03-21T13:34:22.518Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "43",
+        "object_repr": "Romil Hemnani produced Cinema 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+        "action_time": "2018-03-21T13:34:38.235Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "44",
+        "object_repr": "Q3 produced Stupid",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+        "action_time": "2018-03-21T13:34:50.108Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "45",
+        "object_repr": "Romil Hemnani produced Stupid",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+        "action_time": "2018-03-21T13:35:11.904Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "46",
+        "object_repr": "Romil Hemnani produced Bleach",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+        "action_time": "2018-03-21T13:35:19.562Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "47",
+        "object_repr": "Jabari Manwa produced Bleach",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+        "action_time": "2018-03-21T13:35:33.588Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "48",
+        "object_repr": "Romil Hemnani produced Alaska",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+        "action_time": "2018-03-21T13:35:49.626Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "49",
+        "object_repr": "Jabari Manwa produced Hottie",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+        "action_time": "2018-03-21T13:36:08.802Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "50",
+        "object_repr": "Romil Hemnani produced Cinema 2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+        "action_time": "2018-03-21T13:36:22.885Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "51",
+        "object_repr": "Romil Hemnani produced Sister/Nation",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+        "action_time": "2018-03-21T13:36:40.342Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "52",
+        "object_repr": "Q3 produced Rental",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+        "action_time": "2018-03-21T13:36:47.541Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "53",
+        "object_repr": "Romil Hemnani produced Rental",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+        "action_time": "2018-03-21T13:37:08.142Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "54",
+        "object_repr": "Jabari Manwa produced Stains",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+        "action_time": "2018-03-21T13:37:18.146Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "55",
+        "object_repr": "Romil Hemnani produced Stains",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+        "action_time": "2018-03-21T13:37:36.947Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "56",
+        "object_repr": "Romil Hemnani produced Cinema 3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 112,
+    "fields": {
+        "action_time": "2018-03-21T13:37:51.021Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "57",
+        "object_repr": "Bearface produced Team",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 113,
+    "fields": {
+        "action_time": "2018-03-21T13:38:17.815Z",
+        "user": [
+            "jackrabbit"
+        ],
+        "content_type": [
+            "resthampton_app",
+            "songtoperson"
+        ],
+        "object_id": "3",
+        "object_repr": "Kiko Merley produced Gold",
         "action_flag": 3,
         "change_message": ""
     }
