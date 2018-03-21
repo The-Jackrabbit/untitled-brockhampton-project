@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'resthampton.wsgi.application'
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.mysql',
-		'NAME': 'cs4501',
+		'NAME': 'resthampton',
 		'USER': 'www',
 		'PASSWORD': '$3cureUS',
 		'HOST': 'db',

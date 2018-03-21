@@ -30,6 +30,7 @@ class Album(models.Model):
 	img_lg = models.ImageField(upload_to='media/albums/large', blank=True, null=True)
 	img_md = models.ImageField(upload_to='media/albums/medium', blank=True, null=True)
 	img_sm = models.ImageField(upload_to='media/albums/small', blank=True, null=True)
+	img_xs = models.ImageField(upload_to='media/albums/xs', blank=True, null=True)
 	year = models.DateTimeField()
 	runtime = models.DecimalField(max_digits=13, decimal_places=10, blank=True, null=True)
 
@@ -201,21 +202,22 @@ class Person(models.Model):
 	def get_words(self):
 		wordMap = {}
 		songParts = SongPartToPerson.objects.filter(person=self)
+		wordTemplate = {"overall": 1}
+		for album in Album.objects.all():
+			wordTemplate[album.name] = 0
 		for songPart in songParts:
 			text = songPart.songPart.lyrics
 			album = songPart.songPart.song.album.name
 			words = self.format_word(text).split(" ")
 			for word in words:
 				if word not in wordMap:
-					wordEntry = {"overall": 1}
+					wordEntry = wordTemplate.copy()
 					wordEntry[album] = 1
+					wordEntry["name"] = word
 					wordMap[word] = wordEntry
 				else:
 					wordMap[word]["overall"] += 1
-					if album in wordMap[word]:
-						wordMap[word][album] += 1
-					else:
-						wordMap[word][album] = 1
+					wordMap[word][album] += 1
 		
 		return wordMap
 
@@ -230,7 +232,12 @@ class Person(models.Model):
 			count += words[word]["overall"]
 		
 		return count
-
+	def get_album_categories(self):
+		cats = ["overall"]
+		for album in Album.objects.all():
+			cats.append(album.name)
+		return cats
+		
 	def get_top_n_words(self, n=10, allowFiller=False, minLength=1):
 		words = self.get_words().keys()
 		vals = self.get_words()
@@ -242,7 +249,7 @@ class Person(models.Model):
 					wordData[category] = vals[word][category]
 				w.append(wordData)
 			else:
-				if not is_filler_word(word) and len(word) > minLength:
+				if not is_filler_word(word) and len(word) >= minLength:
 					wordData = {}
 					for category in vals[word]:
 						wordData[category] = vals[word][category]

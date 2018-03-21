@@ -64,17 +64,16 @@ class Member extends Component {
 		.then(function(res){
 			
 			let wordBarCategories = [];
-			res.data.result.words.forEach(element => {
-				wordBarCategories.push(<Bar dataKey={element.name} fill='#FF6A00' />);
-			});
+			let albumCats = res.data.result.albumCategories;
+			for (let i = 1 ; i < albumCats.length ; i++) {
+				wordBarCategories.push(<Bar dataKey={albumCats[i]} fill={_this.state.albumColors[i]} />);
+			}
 			_this.setState({
 				"wordCount": res.data.result.wordCount,
 				"uniqueWordCount": res.data.result.uniqueWordCount,
 				"words": res.data.result.words,
 				"wordBarCategories": wordBarCategories
 			});
-			// console.log("res.data.result.words");
-			// console.log(res.data.result.words);
 		});
 		
 
@@ -99,80 +98,7 @@ class Member extends Component {
 		console.log(this.props);
 	}
 
-	componentDidMount() {
-		let a = ["a", "b", ["c", "d", "e"], ["f", ["g", "h"], "i"], "j"];
-		let b = ["f", ["g", "h"], "i"];
-		let s0 = "-0";
-		let s1 = "12.34";
-		let s2 = "57";
-		let s3 = "0.12";
-		console.log(this.weeblyFloat(s0));
-		
-		console.log(this.weeblyFloat(s1));
-		console.log(this.weeblyFloat(s2));
-		console.log(this.weeblyFloat(s3));
-	}
-	weeblyFloat(str) {
-		// Catch case where string isn't number like or where str === "0"	
-		// Technically this uses a full Number() just for the zero case,
-		// but the method below it also works for 0.
-		if (str.length == 0 || Number(str) === 0) {
-			return 0;
-		}
-		/*
-			Two cases:
-			1) Pre-decimal
-			2) Post-decimal
-			POSTDECIMAL.PREDECIMAL
-			If num has no decimal, great, it only reaches predecimal, else
-			we need to format it properly
-		*/
-		let isPostDecimal = 0;
-		let val = 0;
-		let decimalLength = 0;
-		let isNegative = (str[0] == "-") ? 1 : 0;
-		// If isNegative, that means we should analyze all but the last char
-		for (let i = str.length - 1 ; i >= isNegative; i--) {
-			if (str[i] === ".") {
-				isPostDecimal = 1;
-				decimalLength = str.length - i - 1;
-			}
-			else {
-				val += Number(str[i])*Math.pow(10, str.length - i - isPostDecimal - 1);	
-				/* str.length - i - isPostDecimal - 1, need to offset by isPostDecimal, because
-				the "." adds an extra place and we don't want that to contribute to the Math.pow()
-				- if it never finds a "." then its fine because the offset wont happen.
-				*/
-			}
-		}
-		isNegative = (isNegative === 1) ? -1 : 1;
-		return isNegative*(val/Math.pow(10, decimalLength));
-	}
-
-
-	flattenArray(arr) {
-		let flattenedArray = [];
-		while (arr.length > 0) {
-			let element = arr.shift();
-			if (Array.isArray(element)) {
-				let flattendSubarray = this.flattenArray(element);
-				// We can work with a single depth array element
-				// it gets tricky when we have arrays in arrays in arrays etc
-				flattenedArray = flattenedArray.concat(flattendSubarray);
-			} else {
-				flattenedArray.push(element);
-			}
-		}
-		return flattenedArray;
-	}
-
 	render() {
-		const data = [{name: 'Page A', uv: 590, pv: 800, amt: 1400},
-              {name: 'Page B', uv: 868, pv: 967, amt: 1506},
-              {name: 'Page C', uv: 1397, pv: 1098, amt: 989},
-              {name: 'Page D', uv: 1480, pv: 1200, amt: 1228},
-              {name: 'Page E', uv: 1520, pv: 1108, amt: 1100},
-              {name: 'Page F', uv: 1400, pv: 680, amt: 1700}];
 		
 		return (
 			<div className="member-page">
@@ -272,7 +198,7 @@ class Member extends Component {
 						<CartesianGrid strokeDasharray="3 3"/>
 						<Tooltip/>
 						<Legend />
-						<Bar dataKey="value" fill='#FF6A00' />
+						{this.state.wordBarCategories}
 					</BarChart>
 				</div>
 				<div className="song-stats grid-container" id="songs" style={{"width": this.state.fullWidth, "height": this.state.fullHeight}}>

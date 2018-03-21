@@ -41,6 +41,7 @@ def words(request):
 	json = {}
 	json["args"] = args
 	json["words"] = words
+	json["albumCategories"] = person.get_album_categories()
 	json["wordCount"] = person.get_num_words()
 	json["uniqueWordCount"] = person.get_num_unique_words()
 

@@ -8,7 +8,7 @@ with open('song.txt') as f:
 song = {}
 song['song_title'] = str(input("Song name: "))
 song['song_position'] = int(input("Song position: "))
-song['album_title'] = "Saturation I"
+song['album_title'] = "Saturation III"
 pars = {}
 paragraph = ""
 prog = re.compile(r"[A-Za-z 0-9]+:")
