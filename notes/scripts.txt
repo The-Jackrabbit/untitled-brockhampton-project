@@ -1,0 +1,1 @@
+python3 manage.py dumpdata --natural-foreign --indent=4 -e contenttypes -e auth.Permission -e sessions  > db.json

@@ -1,0 +1,103 @@
+.album-bg {
+	width: 100%;
+}
+.album-bg-container {
+	background: no-repeat center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: absolute;
+	opacity: 0.4;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+.splash-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 100;
+}
+
+.main-content {
+	width: 100vw;
+	position: absolute;
+	top: 100vh;
+	left: 0;
+}
+
+.album-name {
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-size: 96px;
+	text-align: center;
+	letter-spacing: 6.7px;
+	position: absolute;
+	top: 50vh;
+	left: 50vw;
+	transform: translateX(-50%) translateY(-75%);
+}
+
+.song-name {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 13.5px;
+}
+
+.part-type-header {
+	font-family: Georgia, serif;
+	font-size: 36px;
+}
+
+.lyrics {
+	font-family: Georgia, serif;
+	font-size: 21px;
+	white-space: pre-wrap;
+}
+
+.song-lyrics-container {
+	max-height: 90vh;
+	overflow-y: scroll;
+}
+
+.song-row {
+	cursor: pointer;
+	
+}
+
+div.song.name:hover {
+	color: #70A6ED;
+}
+
+
+.album.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-areas: ". tracklist ." ;
+		  /*"head head"
+                       "nav  main"
+                       "nav  foot";*/
+}
+@media only screen and (max-width: 500px) {
+	
+	.album.grid-container {
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"tracklist";
+		width: 100vw;
+	}
+	 
+}
+
+.album .header {
+	grid-area: header;
+}
+.album .tracklist {
+	grid-area: tracklist;
+}

@@ -1,0 +1,39 @@
+version: "2"
+services:
+  db:
+    image: postgres
+
+  backend:
+    image: django
+    links:
+      -  db:db
+    volumes:
+      - ./backend:/app
+    ports:
+      - "7001:8000"
+    command: >
+            bash -c "cd ./app
+            && pip install --upgrade pip
+            && pip install --upgrade -r reqs.txt
+            && python3 manage.py makemigrations
+            && python3 manage.py migrate
+            && python3 manage.py makemigrations resthampton_app
+            && python3 manage.py migrate resthampton_app
+            && python3 manage.py loaddata db.json
+            && python3 manage.py runserver 0.0.0.0:8000"
+
+  frontend:
+      image: "node:8"
+      user: "node"
+      environment:
+        - NODE_ENV=production
+      volumes:
+        - ./frontend:/app
+      links:
+        -  backend:backend
+      ports:
+      - "7004:3000"
+      command: >
+            bash -c "cd ./app
+            && npm install
+            && npm start"

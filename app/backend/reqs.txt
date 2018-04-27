@@ -1,0 +1,11 @@
+Django
+gunicorn
+psycopg2
+psycopg2-binary
+djangorestframework==3.7.7
+django-cors-headers==2.1.0
+elasticsearch==2.4.1
+kafka-python==1.0.0
+Pillow==5.0.0
+six==1.10.0
+urllib3==1.20

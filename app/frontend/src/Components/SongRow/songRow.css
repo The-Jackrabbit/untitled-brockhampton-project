@@ -1,0 +1,63 @@
+
+.song.grid-container {
+	display: grid;
+	grid-template-areas: "name . credits" 
+								"lyrics lyrics lyrics"
+								"separator separator separator";
+}
+.song.credits {
+	text-align: end;
+}
+@media only screen and (max-width: 500px) {
+	.song.grid-container {
+		grid-template-areas: 
+		"name"
+		"credits"
+		"lyrics"
+		"separator";
+	}
+	.song.credits {
+		text-align: start;
+	}
+}
+.song-name {
+	word-wrap: break-word;
+}
+.name {
+	grid-area: name;
+	overflow: hidden;
+}
+.credits {
+	grid-area: credits;
+}
+
+.lyrics {
+	grid-area: lyrics;
+}
+.separator {
+	grid-area: separator;
+}
+
+.song-part.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 6fr;
+	grid-template-areas: "credits name" 
+								"credits lyrics";
+		  /*"head head"
+                       "nav  main"
+                       "nav  foot";*/
+}
+@media only screen and (max-width: 500px) {
+	.song-part.grid-container {
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"name"
+		"credits"
+		"lyrics";
+	}
+	 
+}
+
+.song-part.credits {
+	
+}

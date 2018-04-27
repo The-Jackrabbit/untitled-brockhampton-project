@@ -1,0 +1,130 @@
+
+.member-page .grid-container {
+	height: 100vh;
+	width: 100vw;
+}
+.member.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 6fr 1fr; 
+	grid-template-rows: 1fr 8fr 1fr; 
+	grid-template-areas: 
+	"header header header" 
+	". body ." 
+	". footer ." ;
+}
+
+.member .header {
+	grid-area: header;
+}
+
+.member .footer {
+	margin: auto;
+	grid-area: footer;
+}
+
+.member .body {
+	grid-area: body;
+	display: grid;
+	grid-template-columns: 2fr 7fr; 
+	grid-template-areas: 
+	"profile quickstats" 
+	"nav sectionStats";
+}
+
+
+@media only screen and (max-width: 500px) {
+	
+	.member.grid-container {
+		grid-template-columns: 1fr;
+		width: 100vw;
+	}
+	 
+}
+
+.body .profile {
+	grid-area: profile;
+	margin: auto;
+}
+
+.body .quick-stats {
+	grid-area: quickstats;
+	
+}
+
+.body .section-nav {
+	grid-area: nav;
+}
+
+.body .section-stats {
+	grid-area: sectionStats;
+}
+
+.section-nav a {
+	font-size: 24px;
+	display: block;
+	text-align: center;
+	letter-spacing: 4px;
+	line-height: 29px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #BBBBBB;
+	padding: 15px 0px;
+
+}
+.section-nav a:hover {
+	color: #70A6ED;
+	text-decoration: none;
+}
+
+.body .quick-stats {
+	display: grid;
+	padding-top: 25px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: 
+	"quickWords quickParts quickAlbums" ;
+}
+
+.quick-stats .quick-words {
+	grid-area: quickWords;
+	margin:0 auto;
+}
+
+.quick-stats .quick-parts {
+	grid-area: quickParts;
+	margin:0 auto;
+}
+
+.quick-stats .quick-albums {
+	grid-area: quickAlbums;
+	margin:0 auto;
+}
+.quick-words h2, .quick-words h4 {
+	letter-spacing: 3px;
+	
+}
+.quick-words .count {
+	font-size: 48px;
+	line-height: 46px;
+	color: #70A6ED;
+}
+.quick-words .unique-count {
+	font-size: 36px;
+	color: #F39D0F;
+	line-height: 33px;
+}
+.quick-words span {
+	vertical-align: top;
+}
+
+.quick-title {
+	font-size: 18px;
+	letter-spacing: 3px;
+	color: #4A4A4A;
+	font-weight: bold;
+	line-height: 22px;
+}
+
+.word-stats .recharts-wrapper {
+	height: 100vh;
+	width: 100vw;
+}
